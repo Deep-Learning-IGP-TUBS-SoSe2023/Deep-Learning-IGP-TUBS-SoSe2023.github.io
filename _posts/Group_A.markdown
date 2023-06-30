@@ -4,6 +4,8 @@ title: Group A Title of your final project
 description: This is Group A final project # Add post description (optional)
 img: software.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
+date: 2017-09-12 13:32:20 +0300
+tags: [Holidays, Hawaii]
 ---
 
 You can use markdown to fill your project page.
