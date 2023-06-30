@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Group A Title of your final project
-date: 2021-07-15 13:32:20 +0300
-description: This is Group A final project # Add post description (optional)
+title: Group D Title of your final project
+date: 2023-04-15 13:32:20 +0300
+description: This is Group D final project # Add post description (optional)
 img: software.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
-tags: [Holidays, Hawaii]
+tags: [Projects]
 ---
 
 You can use markdown to fill your project page.
