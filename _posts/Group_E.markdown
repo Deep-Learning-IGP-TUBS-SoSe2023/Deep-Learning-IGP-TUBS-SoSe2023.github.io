@@ -1,0 +1,26 @@
+---
+layout: post
+title: Group E Title of your final project
+description: This is Group E final project # Add post description (optional)
+img: how-to-start.jpg # Add image post (optional), put your image in assets/img/
+fig-caption: # Add figcaption (optional)
+---
+
+You can use markdown to fill your project page.
+
+- Add a brief description of your project.
+
+- If you wish, you can write your names here.
+
+Put your images in the assets/img folder. Then, you can add them in this way:
+
+![My Figure]({{site.baseurl}}/assets/img/we-in-rest.jpg)
+
+## Dataset
+A brief description of your dataset: number of images, application, image size, etc.
+
+## Model(s)
+Present the model(s) used in your experiments as well as the experimental protocol followed.
+
+## Results
+Show your results and comment them briefly.
