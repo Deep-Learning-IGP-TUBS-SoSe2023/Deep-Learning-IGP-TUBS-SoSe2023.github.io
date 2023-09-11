@@ -12,17 +12,32 @@ You can use markdown to fill your project page.
 
 - Add a brief description of your project.
 
-- If you wish, you can write your names here.
+- Reiko Lettmoden
+- Amit Amit
 
 Put your images in the assets/img folder. Then, you can add them in this way:
 
 ![My Figure]({{site.baseurl}}/assets/img/we-in-rest.jpg)
 
 ## Dataset
-A brief description of your dataset: number of images, application, image size, etc.
+The dataset used in our experiments is [Landslide4Sense](https://github.com/iarai/Landslide4Sense-2022) for semantic segmentation to detect landslides. The 128x128 images are collected from diverse geographical regions and the Landslide4Sense dataset has three splits, training/validation/test, consisting of 3799, 245, and 800 image patches, respectively. Each image patch is a composite of 14 bands that:
+
+
+- Multispectral data from Sentinel-2: B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12.
+- Slope data from ALOS PALSAR: B13.
+- Digital elevation model (DEM) from ALOS PALSAR: B14.
+
+The dataset is highly imbalanced with 98% pixels belonging to the background class and 2% belonging to the landslide class. We use 50% of the train data and split it into train, validation and test.
 
 ## Model(s)
-Present the model(s) used in your experiments as well as the experimental protocol followed.
+The models employed are UNet, SegFormer and Swin Transformer based UNet. 
 
 ## Results
-Show your results and comment them briefly.
+| Bands      | Augs | Loss   | Architecture | F1-Score     |
+|------------|------|--------|--------------|--------------|
+| ALL        | -    | CE     | UNet         | 0.721        |
+| RGB Height | -    | CE     | UNet         | 0.718        |
+| ALL        | +    | CE     | UNet         | 0.736        |
+| ALL        | +    | Lovasz | UNet         | 0.756 |
+| ALL        | +    | Lovasz | SwinT UNet   | 0.745        |
+
