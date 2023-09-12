@@ -12,11 +12,7 @@ You can use markdown to fill your project page.
 
 - Add a brief description of your project.
 
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Names</title>
-</head>
 <body>
     <p><strong>Reiko Lettmoden</strong></p>
     <p><em>Amit Amit</em></p>
