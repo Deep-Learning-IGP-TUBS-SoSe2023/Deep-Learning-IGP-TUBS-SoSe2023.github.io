@@ -2,7 +2,7 @@
 layout: post
 title: Group C Title of your final project
 date: 2023-04-16 13:32:20 +0300
-description: This is Group C final project # Add post description (optional)
+description: This is Group C final project # LandSlide4Sense
 img: workflow.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
