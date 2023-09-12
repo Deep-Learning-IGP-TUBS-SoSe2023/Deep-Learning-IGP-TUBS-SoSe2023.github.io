@@ -15,7 +15,7 @@ You can use markdown to fill your project page.
 <html>
 <body>
     <p><strong>Reiko Lettmoden</strong></p>
-    <p><em>Amit Amit</em></p>
+    <p><strong><em>Amit Amit</strong></p>
 </body>
 </html>
 
