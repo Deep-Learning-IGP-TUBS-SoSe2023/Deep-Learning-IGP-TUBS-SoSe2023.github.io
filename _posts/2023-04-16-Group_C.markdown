@@ -3,7 +3,7 @@ layout: post
 title: LandSlide4Sense
 date: 2023-04-16 13:32:20 +0300
 description: This is Group C final project # Add post description (optional)
-img: workflow.jpg # Add image post (optional), put your image in assets/img/
+img: group_c_landslide.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
@@ -51,4 +51,3 @@ The Lovasz loss finds a good precision-recall tradeoff and thus achieves the hig
 | ALL        | +    | CE     | UNet         | 0.736        |
 | ALL        | +    | Lovasz | UNet         | 0.756        |
 | ALL        | +    | Lovasz | SwinT UNet   | 0.745        |
-
