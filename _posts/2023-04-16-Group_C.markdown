@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
 
-# Landslide detection through semantic segmentation on the Landslide4Sense dataset
+## Landslide detection through semantic segmentation on the Landslide4Sense dataset
 
 <html>
 <body>
