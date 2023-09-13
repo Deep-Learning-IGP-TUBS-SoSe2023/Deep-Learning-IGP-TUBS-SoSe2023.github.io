@@ -46,7 +46,7 @@ Selecting a subset of all 14 bands does not yield an improvement, however just s
 The Lovasz loss finds a good precision-recall tradeoff and thus achieves the highest F1-Score of all loss configurations. More powerful architectures such as a UNet with Swin Transformer backbone and SegFormer overfit more to the training data, such that more data might be needed to train these architectures. Hence, all in all a UNet trained with augmentations and Lovasz loss achieves the best F1-Score of all employed models.
 
 
-| Bands      | Augs | Loss   | Model        | F1-Score     |
+| Bands      | Augmentations | Loss   | Model        | F1-Score     |
 |------------|------|--------|--------------|--------------|
 | ALL        | -    | CE     | UNet         | 0.721        |
 | RGB Height | -    | CE     | UNet         | 0.718        |
