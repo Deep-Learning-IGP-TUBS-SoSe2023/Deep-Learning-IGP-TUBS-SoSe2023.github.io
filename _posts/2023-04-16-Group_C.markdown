@@ -7,6 +7,9 @@ img: group_c_landslide.jpg # Add image post (optional), put your image in assets
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
+
+# Landslide detection through semantic segmentation on the Landslide4Sense dataset
+
 <html>
 <body>
     <p><strong>Reiko Lettmoden</strong></p>
