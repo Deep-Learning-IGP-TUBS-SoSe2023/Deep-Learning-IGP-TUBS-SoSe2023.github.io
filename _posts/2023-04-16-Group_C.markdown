@@ -10,12 +10,10 @@ tags: [Projects]
 
 ## Landslide detection through semantic segmentation on the Landslide4Sense dataset
 
-<html>
-<body>
-    <p><strong>Reiko Lettmoden</strong></p>
-    <p><strong>Amit Amit</strong></p>
-</body>
-</html>
+## Authors
+
+- Reiko Lettmoden
+- Amit Amit
 
 ## Dataset
 The dataset used in our experiments is [Landslide4Sense](https://github.com/iarai/Landslide4Sense-2022) for semantic segmentation to detect landslides. The 128x128 images are collected from diverse geographical regions and the Landslide4Sense dataset has three splits, training/validation/test, consisting of 3799, 245, and 800 image patches, respectively. Each image patch is a composite of 14 bands that:
