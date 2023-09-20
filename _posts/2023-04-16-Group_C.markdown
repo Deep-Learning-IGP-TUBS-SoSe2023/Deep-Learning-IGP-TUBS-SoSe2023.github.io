@@ -23,7 +23,8 @@ The dataset used in our experiments is [Landslide4Sense](https://github.com/iara
 - Slope data from ALOS PALSAR: B12.
 - Digital elevation model (DEM) from ALOS PALSAR: B13.
 
-![Dataset Imbalance]({{site.baseurl}}/assets/img/group_c_landslide_imbalance.png)
+<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:400px;"/>
+<!-- ![Dataset Imbalance]({{site.baseurl}}/assets/img/group_c_landslide_imbalance.png) -->
 
 The dataset is highly imbalanced with 98% pixels belonging to the background class and 2% belonging to the landslide class, as seen in the figure above from [Ghorbanzadeh et al.](https://ieeexplore.ieee.org/iel7/4609443/4609444/09944085.pdf). We use 50% of the train data due to computation constraints and split it into train, validation and test.
 
