@@ -24,7 +24,7 @@ The dataset used in our experiments is [Landslide4Sense](https://github.com/iara
 - Digital elevation model (DEM) from ALOS PALSAR: B13.
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:400px;"/>
+<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:500px;"/>
 </p>
 <!-- ![Dataset Imbalance]({{site.baseurl}}/assets/img/group_c_landslide_imbalance.png) -->
 
