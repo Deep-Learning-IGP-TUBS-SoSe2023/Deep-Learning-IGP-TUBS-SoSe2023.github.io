@@ -43,7 +43,12 @@ We follow the outcome of the challenge ([Ghorbanzadeh et al.](https://ieeexplore
 
 Our detailed report and results can be found [here](https://de.overleaf.com/read/zdqbcdhzyhbf).
 
-Selecting a subset of all 14 bands does not yield an improvement, however just selecting RGB bands from Sentinel-2 and both bands from ALOS PALSAR achieve almost as good F1-Score as all 14 bands. An UNet trained with augmentations overfits less to the train data which allows us to train our models longer (early stopping later in the training stage). Since the data is highly imbalanced, losses such as the Lovasz loss and WCE allow the model to better learn from minority classes. As seen in the figures below, an UNet trained with WCE (bottom) achieves higher recall than an UNet trained with CE (top) but also predicts more false positives (lower precision). 
+Selecting a subset of all 14 bands does not yield an improvement, however just selecting RGB bands from Sentinel-2 and both bands from ALOS PALSAR achieve almost as good F1-Score as all 14 bands. An UNet trained with augmentations (blue) overfits less to the train data in comparison to the model without augmentation (orange), as seen in the tensorboard below. This which allows us to train our models longer (early stopping later in the training stage) and leads to better generalizability. 
+<p style="text-align:center;">
+<img src="{{site.baseurl}}/assets/img/group_c_augmentations.png" alt="drawing" style="width:800px;"/>
+</p>
+
+Since the data is highly imbalanced, losses such as the Lovasz loss and WCE allow the model to better learn from minority classes. As seen in the figures below, an UNet trained with WCE (bottom) achieves higher recall than an UNet trained with CE (top) but also predicts more false positives (lower precision). 
 
 <p style="text-align:center;">
 <img src="{{site.baseurl}}/assets/img/group_c_803_UNet_base_all_aug_e100.png" alt="drawing" style="width:500px;" />
