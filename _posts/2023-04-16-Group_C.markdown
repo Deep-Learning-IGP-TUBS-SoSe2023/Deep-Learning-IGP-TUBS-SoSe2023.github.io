@@ -23,14 +23,15 @@ The dataset used in our experiments is [Landslide4Sense](https://github.com/iara
 - Slope data from ALOS PALSAR: B12.
 - Digital elevation model (DEM) from ALOS PALSAR: B13.
 
-<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:400px;"/>
+<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:600px;" class="center"/>
 <!-- ![Dataset Imbalance]({{site.baseurl}}/assets/img/group_c_landslide_imbalance.png) -->
 
 The dataset is highly imbalanced with 98% pixels belonging to the background class and 2% belonging to the landslide class, as seen in the figure above from [Ghorbanzadeh et al.](https://ieeexplore.ieee.org/iel7/4609443/4609444/09944085.pdf). We use 50% of the train data due to computation constraints and split it into train, validation and test.
 
 ## Model(s)
 
-![Architectures]({{site.baseurl}}/assets/img/group_c_architectures.png)
+<img src="{{site.baseurl}}/assets/img/group_c_architectures.png" alt="drawing" style="width:600px;" class="center"/>
+<!-- ![Architectures]({{site.baseurl}}/assets/img/group_c_architectures.png) -->
 
 We follow the outcome of the challenge ([Ghorbanzadeh et al.](https://ieeexplore.ieee.org/iel7/4609443/4609444/09944085.pdf)) such that the UNet is employed as baseline and as more powerful architectures the SegFormer and UNet with a Swin Transformer backbone, which are visualized in the figure above. 
 
@@ -40,10 +41,12 @@ Our detailed report and results can be found [here](https://de.overleaf.com/read
 
 Selecting a subset of all 14 bands does not yield an improvement, however just selecting RGB bands from Sentinel-2 and both bands from ALOS PALSAR achieve almost as good F1-Score as all 14 bands. An UNet trained with augmentations overfits less to the train data which allows us to train our models longer (early stopping later in the training stage). Since the data is highly imbalanced, losses such as the Lovasz loss and WCE allow the model to better learn from minority classes. As seen in the figures below, an UNet trained with WCE (bottom) achieves higher recall than an UNet trained with CE (top) but also predicts more false positives (lower precision). 
 
-![UNet with CE loss]({{site.baseurl}}/assets/img/group_c_803_UNet_base_all_aug_e100.png)
+<img src="{{site.baseurl}}/assets/img/group_c_803_UNet_base_all_aug_e100.png" alt="drawing" style="width:500px;" class="center"/>
 
+<img src="{{site.baseurl}}/assets/img/group_c_803_UNet_base_aug_wec_10_e100.png" alt="drawing" style="width:500px;" class="center"/>
 
-![UNet with WCE loss]({{site.baseurl}}/assets/img/group_c_803_UNet_base_aug_wec_10_e100.png)
+<!-- ![UNet with CE loss]({{site.baseurl}}/assets/img/group_c_803_UNet_base_all_aug_e100.png) -->
+<!-- ![UNet with WCE loss]({{site.baseurl}}/assets/img/group_c_803_UNet_base_aug_wec_10_e100.png) -->
 
 The Lovasz loss finds a good precision-recall tradeoff and thus achieves the highest F1-Score of all loss configurations. More powerful architectures such as a UNet with Swin Transformer backbone and SegFormer overfit more to the training data, such that more data might be needed to train these architectures. Hence, all in all a UNet trained with augmentations and Lovasz loss achieves the best F1-Score of all employed models.
 
