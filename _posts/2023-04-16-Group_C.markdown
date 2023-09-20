@@ -24,7 +24,7 @@ The dataset used in our experiments is [Landslide4Sense](https://github.com/iara
 - Digital elevation model (DEM) from ALOS PALSAR: B13.
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:500px;"/>
+<img src="{{site.baseurl}}/assets/img/group_c_landslide_imbalance.png" alt="drawing" style="width:400px;"/>
 </p>
 <!-- ![Dataset Imbalance]({{site.baseurl}}/assets/img/group_c_landslide_imbalance.png) -->
 
@@ -33,7 +33,7 @@ The dataset is highly imbalanced with 98% pixels belonging to the background cla
 ## Model(s)
 
 <p style="text-align:center;">
-<img src="{{site.baseurl}}/assets/img/group_c_architectures.png" alt="drawing" style="width:500px;"/>
+<img src="{{site.baseurl}}/assets/img/group_c_architectures.png" alt="drawing" style="width:400px;"/>
 </p>
 <!-- ![Architectures]({{site.baseurl}}/assets/img/group_c_architectures.png) -->
 
@@ -47,6 +47,8 @@ Selecting a subset of all 14 bands does not yield an improvement, however just s
 
 <p style="text-align:center;">
 <img src="{{site.baseurl}}/assets/img/group_c_803_UNet_base_all_aug_e100.png" alt="drawing" style="width:500px;" />
+</p>
+<p style="text-align:center;">
 <img src="{{site.baseurl}}/assets/img/group_c_803_UNet_base_aug_wec_10_e100.png" alt="drawing" style="width:500px;">
 </p>
 <!-- ![UNet with CE loss]({{site.baseurl}}/assets/img/group_c_803_UNet_base_all_aug_e100.png) -->
