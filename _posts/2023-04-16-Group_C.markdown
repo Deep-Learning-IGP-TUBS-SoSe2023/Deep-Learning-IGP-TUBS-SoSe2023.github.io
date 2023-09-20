@@ -41,7 +41,7 @@ We follow the outcome of the challenge ([Ghorbanzadeh et al.](https://ieeexplore
 
 ## Results
 
-Our detailed report and results can be found [here](https://de.overleaf.com/read/zdqbcdhzyhbf).
+Our detailed report and results with all experimental configurations can be found [here](https://de.overleaf.com/read/zdqbcdhzyhbf).
 
 Selecting a subset of all 14 bands does not yield an improvement, however just selecting RGB bands from Sentinel-2 and both bands from ALOS PALSAR achieve almost as good F1-Score as all 14 bands. An UNet trained with augmentations (blue) overfits less to the train data in comparison to the model without augmentation (orange), as seen in the tensorboard below. This which allows us to train our models longer (early stopping later in the training stage) and leads to better generalizability. 
 <p style="text-align:center;">
