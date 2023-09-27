@@ -23,13 +23,11 @@ tags: [Projects]
 ## Authors
 
 - Jose Manuel Gutierrez Castellanos
-- Eslam Shaarawy.
+- Eslam Shaarawy
 
 This paper provides an overview and introduction of two main models used for object detection applications, showing outstanding results in performance and accuracy.
 
 The **YOLOv5 & YOLOv8** models underwent a rigorous series of experiments, encompassing **architectural variations**, **augmentation levels**, and the incorporation of **negative images**. Subsequently, a concise analysis of the inferences drawn from another publicly available dataset is presented and summarized. This experimental investigation is anticipated to contribute to an enhanced comprehension of the applied model designs, offering valuable insights for researchers interested in implementing cutting-edge solutions utilizing the YOLO family models.
-
-![My Figure]({{site.baseurl}}/assets/img/we-in-rest.jpg)
 
 ## Dataset
 
