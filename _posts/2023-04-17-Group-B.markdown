@@ -1,28 +1,125 @@
 ---
 layout: post
-title: Group B Title of your final project
+title: YOLOv5 vs YOLOv8:The Battle for Object Detection Supremacy
 date: 2023-04-17 13:32:20 +0300
 description: This is Group B final project # Add post description (optional)
 img: software.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
+<p align="center">
+  <a href="#authors">Authors</a> •
+  <a href="#dataset">Dataset</a> •
+  <a href="#models">Model(s)</a> •
+  <a href="#results">Results</a> •
+  <a href="#inferences">Inferences</a> •
+  <a href="#inferences">Summary</a> •
+  <a href="#task-distribution">Task Distribution</a> 
+</p>
 
-You can use markdown to fill your project page.
+## Authors
 
-- Add a brief description of your project.
+- Jose Manuel Gutierrez Castellanos
+- Eslam Shaarawy.
 
-- If you wish, you can write your names here.
+This paper provides an overview and introduction of two main models used for object detection applications, showing outstanding results in performance and accuracy.
 
-Put your images in the assets/img folder. Then, you can add them in this way:
+The **YOLOv5 & YOLOv8** models underwent a rigorous series of experiments, encompassing **architectural variations**, **augmentation levels**, and the incorporation of **negative images**. Subsequently, a concise analysis of the inferences drawn from another publicly available dataset is presented and summarized. This experimental investigation is anticipated to contribute to an enhanced comprehension of the applied model designs, offering valuable insights for researchers interested in implementing cutting-edge solutions utilizing the YOLO family models.
 
 ![My Figure]({{site.baseurl}}/assets/img/we-in-rest.jpg)
 
 ## Dataset
-A brief description of your dataset: number of images, application, image size, etc.
+
+The dataset used in our experiments is [NWPU VHR-10 Dataset](https://drive.google.com/drive/folders/13Vj27NP2TY2aJ5AlI4LGAnVd8ghEizrZ?usp=drive_link). The **NWPU VHR-10 dataset**, introduced by Cheng and Han in 2016, comprises **10 distinct categories** as observed in *Figure 1*, comprising airplane, baseball diamond, basketball court, bridge, harbor, ground track field, ship, storage tank, tennis court, and vehicle. and is enriched
+with 650 meticulously annotated images.
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/classes.png" alt="Image" width="570" height="240">
+  <br>
+  <em>Figure 1. Object examples as per category</em>
+</p>
+
+This dataset boasts a total of **715 RGB images**, sourced from Google Earth, with spatial resolutions spanning from **0.5m to 2m**. Additionally, it incorporates **85 pan-sharpened color infrared images**, characterized by a spatial resolution of 0.08m, procured from the **Vaihingen dataset (Cramer, 2010)**.
+
+Notably, the NWPU VHR-10 dataset comprises 3,896 meticulously annotated object instances, featuring horizontal bounding boxes encompassing a diverse array of objects as presented in Figure 5, including 757 airplanes, 655 storage tanks, 598 vehicles, 524 tennis courts, 390 baseball diamonds, 302 ships, 224 harbors, 163 ground track fields, 159 basketball courts and 124 bridges. 
+
+The dataset’s structure comprises three distinct folders. Firstly, the **"negative image set"** houses *150 images* that lack any instances of the specified object classes. Conversely, the **"positive image set"** encompasses *650 images*, each featuring at least one target object for detection. Finally, the **"ground truth"** folder comprises *650 individual text files*, with each file uniquely corresponding to an image contained within the "positive image set" folder. This organizational framework facilitates precise labeling and association between target objects and their respective images.
+
+As the "negative image set" exclusively comprises background images, its primary purpose is to enhance the generalization capacity of our model. This augmentation equips the model to effectively detect novel instances of objects, thus expanding its ability to discern objects in diverse contexts and scenarios.
 
 ## Model(s)
-Present the model(s) used in your experiments as well as the experimental protocol followed.
+
+The models used during this research are the following:
+
+### YOLOv5 Nano & X
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov5arch1.jpg" alt="Image" width="800" height="800">
+  <br>
+  <em>Figure 2. YOLOv5 architecture (RangeKing 2023)</em>
+</p>
+
+### YOLOv8 Nano & X
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov8arch.jpg" alt="Image" width="800" height="800">
+  <br>
+  <em>Figure 3. YOLOv8 architecture (RangeKing 2023)</em>
+</p>
 
 ## Results
-Show your results and comment them briefly.
+
+The **optimizer** used during the experiments is **"SGD"**, **number of epochs** defined for training is **50**, **batch size** is set to **10** and the image size is set to the default one, which corresponds to **640**
+
+As illustrated in *Figure 4*, regarding the metrics and losses related to YOLOv5, it is evident that the *classification loss* curve displays minimal fluctuations, indicating satisfactory performance. However, the *objectness loss* and *bounding box loss* exhibit some degree of variability, suggesting room for improvement. This observation implies that the model could benefit from extended training epochs to facilitate convergence.
+
+As evident from the metrics depicted in *Figure 5* for YOLOv8, the situation parallels that of YOLOv5, with a the architectural difference. The *distributional focal loss* and *bounding box loss* exhibit areas of potential improvement. It is noteworthy that all experiments were conducted with an equivalent number of epochs; however, it is observed that experiments employing model X required extended training times due to the substantial difference in parameters.
+
+As anticipated, YOLOv8, as the latest iteration within the YOLO family, demonstrates noteworthy advancements when compared to its predecessor, YOLOv5.
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov5metrics.png" alt="Image" width="570" height="240">
+  <br>
+  <em>Figure 4. YOLOv5 metrics and losses</em>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov8metrics.png" alt="Image" width="570" height="240">
+  <br>
+  <em>Figure 5. YOLOv8 metrics and losses</em>
+</p>
+
+**To facilitate a more detailed tracking of the experiments conducted in this research paper, we have made our COMET workspace publicly accessible. Researchers are encouraged to utilize this resource to gain insights from our discoveries. Kindly scan the QR code to access it or follow the respective link [YOLOv5](https://www.comet.com/e-sharaawy/yolo-v5-positive-images-experiments/view/new/panels) - [YOLOv8](https://www.comet.com/josemanuelgtz/final-experiments/view/new/panels)** 
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/QR.png" alt="Image" width="570" height="245">
+  <br>
+</p>
+
+
+## Inferences
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/018.jpg" alt="Image" width="533" height="637">
+  <br>
+  <em>Figure 6. Inference performed with the trained model X of YOLOv8 on NWPU VHR-10</em>
+</p>
+
+
+As depicted in Figure 6, the YOLOv8 model X, trained with the High augmentation configuration and incorporating the negative image set during training, demonstrates remarkable accuracy in object classification and precise localization of bounding boxes within the images.
+
+<p align="center">
+  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/dota.jpg" alt="Image" width="518" height="500">
+  <br>
+  <em>Figure 7. Inference performed with the trained model X of YOLOv8 on DOTA</em>
+</p>
+
+Despite YOLOv8 being trained on the relatively small and low-resolution NWPU VHR-10 dataset, as compared to the larger and higher-resolution DOTA or DIOR datasets, the model’s inferences on DOTA dataset yielded impressive results. Notably, the model exhibited exceptional confidence in detecting airplanes, as illustrated in Figure 7, where even a small airplane positioned in the upper-left corner of the image was detected with a remarkable confidence score of 0.87. It’s important to highlight that these inferences were conducted using non-standard image sizes, as we were dealing with higher-resolution images containing smaller objects compared to those used for YOLOv8 training. In Figure 7, the image size for inference was adjusted to 2632, yielding a confidence score of 0.80
+
+## Summary
+
+YOLOv5 and YOLOv8 are distinguishable by their architectural characteristics. YOLOv5 utilizes a backbone comprising **CSP Darknet53**, augmented by the **SPP Neck**, **PANet**, and three independent detection heads. In contrast, YOLOv8 introduces unique features, including the **separation of its detection heads**, the reintroduction of the **free-anchor detector**, and the incorporation of a novel loss function.
+
+While YOLOv8 demonstrated superior performance in most experiments, it is noteworthy that YOLOv5 enjoys broader recognition, particularly within the scientific community, as evidenced by its higher citation count. This divergence may be attributed to YOLOv8’s status as a *cutting-edge technology (State of the Art)* that has yet to undergo extensive validation. Nonetheless, YOLOv8 exhibits substantial potential.
+
+In our experimental endeavors, we harnessed the **NWPU VHR-10 dataset**, albeit smaller in scale compared to other datasets. However, during the inference phase, we integrated selected images from the **DOTA dataset**, yielding notably promising results. This prompts consideration of the prospect of reversing the dataset hierarchy, with the DOTA dataset assuming a central role in experimentation. Such an approach holds promise for  ignificantly enhancing inference results, given DOTA’s encompassing **variation in image resolutions, aspect ratios of both images and objects, and overall object scale**, all of which can exert a substantial influence on final outcomes.
