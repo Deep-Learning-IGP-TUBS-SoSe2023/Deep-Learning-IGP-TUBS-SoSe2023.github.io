@@ -8,7 +8,7 @@ fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
 
-## YOLOv5 vs YOLOv8:The Battle for Object Detection Supremacy
+## The Battle for Object Detection Supremacy
 
 <p align="center">
   <a href="#authors">Authors</a> •
