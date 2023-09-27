@@ -1,12 +1,15 @@
 ---
 layout: post
-title: YOLOv5 vs YOLOv8:The Battle for Object Detection Supremacy
+title: YOLOv5 vs YOLOv8
 date: 2023-04-17 13:32:20 +0300
 description: This is Group B final project # Add post description (optional)
 img: software.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
+
+## YOLOv5 vs YOLOv8:The Battle for Object Detection Supremacy
+
 <p align="center">
   <a href="#authors">Authors</a> •
   <a href="#dataset">Dataset</a> •
