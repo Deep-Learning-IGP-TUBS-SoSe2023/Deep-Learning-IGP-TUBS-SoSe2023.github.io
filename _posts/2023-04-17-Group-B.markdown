@@ -37,7 +37,7 @@ The dataset used in our experiments is [NWPU VHR-10 Dataset](https://drive.googl
 with 650 meticulously annotated images.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/classes.png" alt="Image" width="570" height="240">
+  <img src="{{site.baseurl}}/assets/img/classes.png" alt="Image" width="570" height="240">
   <br>
   <em>Figure 1. Object examples as per category</em>
 </p>
@@ -57,7 +57,7 @@ The models used during this research are the following:
 ### YOLOv5 Nano & X
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov5arch1.jpg" alt="Image" width="800" height="800">
+  <img src="{{site.baseurl}}/assets/img/yolov5arch1.jpg" alt="Image" width="800" height="800">
   <br>
   <em>Figure 2. YOLOv5 architecture (RangeKing 2023)</em>
 </p>
@@ -65,7 +65,7 @@ The models used during this research are the following:
 ### YOLOv8 Nano & X
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov8arch.jpg" alt="Image" width="800" height="800">
+  <img src="{{site.baseurl}}/assets/img/yolov8arch.jpg" alt="Image" width="800" height="800">
   <br>
   <em>Figure 3. YOLOv8 architecture (RangeKing 2023)</em>
 </p>
@@ -81,13 +81,13 @@ As evident from the metrics depicted in *Figure 5* for YOLOv8, the situation par
 As anticipated, YOLOv8, as the latest iteration within the YOLO family, demonstrates noteworthy advancements when compared to its predecessor, YOLOv5.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov5metrics.png" alt="Image" width="570" height="240">
+  <img src="{{site.baseurl}}/assets/img/yolov5metrics.png" alt="Image" width="570" height="240">
   <br>
   <em>Figure 4. YOLOv5 metrics and losses</em>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/yolov8metrics.png" alt="Image" width="570" height="240">
+  <img src="{{site.baseurl}}/assets/img/yolov8metrics.png" alt="Image" width="570" height="240">
   <br>
   <em>Figure 5. YOLOv8 metrics and losses</em>
 </p>
@@ -95,7 +95,7 @@ As anticipated, YOLOv8, as the latest iteration within the YOLO family, demonstr
 **To facilitate a more detailed tracking of the experiments conducted in this research paper, we have made our COMET workspace publicly accessible. Researchers are encouraged to utilize this resource to gain insights from our discoveries. Kindly scan the QR code to access it or follow the respective link [YOLOv5](https://www.comet.com/e-sharaawy/yolo-v5-positive-images-experiments/view/new/panels) - [YOLOv8](https://www.comet.com/josemanuelgtz/final-experiments/view/new/panels)** 
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/QR.png" alt="Image" width="570" height="245">
+  <img src="{{site.baseurl}}/assets/img/QR.png" alt="Image" width="570" height="245">
   <br>
 </p>
 
@@ -103,7 +103,7 @@ As anticipated, YOLOv8, as the latest iteration within the YOLO family, demonstr
 ## Inferences
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/018.jpg" alt="Image" width="533" height="637">
+  <img src="{{site.baseurl}}/assets/img/018.jpg" alt="Image" width="533" height="637">
   <br>
   <em>Figure 6. Inference performed with the trained model X of YOLOv8 on NWPU VHR-10</em>
 </p>
@@ -112,7 +112,7 @@ As anticipated, YOLOv8, as the latest iteration within the YOLO family, demonstr
 As depicted in Figure 6, the YOLOv8 model X, trained with the High augmentation configuration and incorporating the negative image set during training, demonstrates remarkable accuracy in object classification and precise localization of bounding boxes within the images.
 
 <p align="center">
-  <img src="https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_B/blob/master/Images/Final/dota.jpg" alt="Image" width="518" height="500">
+  <img src="{{site.baseurl}}/assets/img/dota.jpg" alt="Image" width="518" height="500">
   <br>
   <em>Figure 7. Inference performed with the trained model X of YOLOv8 on DOTA</em>
 </p>
