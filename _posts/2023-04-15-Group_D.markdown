@@ -39,6 +39,9 @@ We obtained the following results:
 | Baseline | Same as GeoSeg GitHub                   |
 | ResNet50 | Using ResNet50 as backbone              |
 
+<br/>
+<br/>
+
 | Metric |          | Model    |          |
 |--------|----------|----------|----------|
 |        | ResNet18 | ResNet50 | Baseline |
@@ -46,7 +49,6 @@ We obtained the following results:
 | OA     | 91.4     | 90.8     | 91.2     |
 | mIoU   | 86.5     | 85.9     | 86.5     |
 
+<br/>
+
 ![image]({{site.baseurl}}/assets/img/group_d_results.png)
-
-
-</details>

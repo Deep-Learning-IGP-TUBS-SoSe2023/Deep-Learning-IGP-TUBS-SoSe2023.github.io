@@ -1,28 +1,39 @@
 ---
 layout: post
-title: Group E Title of your final project
+title: Object detection from DIOR dataset with YOLOv5 and YOLOv8
 date: 2023-04-14 13:32:20 +0300
-description: This is Group E final project # Add post description (optional)
-img: how-to-start.jpg # Add image post (optional), put your image in assets/img/
+description: Object detection from DIOR dataset with YOLOv5 and YOLOv8 # Add post description (optional)
+img: group_e_cover.png # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
 
-You can use markdown to fill your project page.
+## Object detection from DIOR dataset with YOLOv5 and YOLOv8
 
-- Add a brief description of your project.
+## Authors
 
-- If you wish, you can write your names here.
-
-Put your images in the assets/img folder. Then, you can add them in this way:
-
-![My Figure]({{site.baseurl}}/assets/img/we-in-rest.jpg)
+- Karam Mawas
+- Raissa Magana Ugarte
 
 ## Dataset
-A brief description of your dataset: number of images, application, image size, etc.
 
-## Model(s)
-Present the model(s) used in your experiments as well as the experimental protocol followed.
+The dataset used in our experiments is [DIOR DATASET](https://arxiv.org/abs/1909.00133) (a brief description of the dataset: 23463 images, each of 800x800 pixels. Its main objective is to be used to develop data-driven methods for detecting multiple different objects from a satellite imagery.)
+
+## Model
+
+The models employed are YOLOv5 and YOLOv8, sizes nano, small and medium.
 
 ## Results
-Show your results and comment them briefly.
+
+We obtained the following results:
+
+![image]({{site.baseurl}}/assets/img/group_e_results_1.png)
+<br/>
+
+![image]({{site.baseurl}}/assets/img/group_e_results_2.png)
+<br/>
+
+![image]({{site.baseurl}}/assets/img/group_e_results_3.png)
+<br/>
+
+![image]({{site.baseurl}}/assets/img/group_e_prediction_1.png)
