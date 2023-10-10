@@ -3,7 +3,7 @@ layout: post
 title: YOLOv5vsYOLOv8
 date: 2023-04-17 13:32:20 +0300
 description: This is Group B final project # Add post description (optional)
-img: groupB_header.jpg # Add image post (optional), put your image in assets/img/
+img: 018.jpg # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---

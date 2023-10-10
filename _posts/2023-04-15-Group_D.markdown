@@ -1,28 +1,52 @@
 ---
 layout: post
-title: Group D Title of your final project
+title: Semantic segmentation in ISPRS-Potsdam dataset
 date: 2023-04-15 13:32:20 +0300
-description: This is Group D final project # Add post description (optional)
-img: software.jpg # Add image post (optional), put your image in assets/img/
+description: Semantic segmentation in ISPRS-Potsdam dataset # Add post description (optional)
+img: group_d_cover.png # Add image post (optional), put your image in assets/img/
 fig-caption: # Add figcaption (optional)
 tags: [Projects]
 ---
 
-You can use markdown to fill your project page.
 
-- Add a brief description of your project.
+## Semantic segmentation in ISPRS-Potsdam dataset
 
-- If you wish, you can write your names here.
+## Authors
 
-Put your images in the assets/img folder. Then, you can add them in this way:
-
-![My Figure]({{site.baseurl}}/assets/img/we-in-rest.jpg)
+- Maritza Corona Hernandez
+- Pankaj Rajoria
 
 ## Dataset
-A brief description of your dataset: number of images, application, image size, etc.
 
-## Model(s)
-Present the model(s) used in your experiments as well as the experimental protocol followed.
+The dataset used in our experiments is the [2D Semantic Labeling Contest - Potsdam](https://www.isprs.org/education/benchmarks/UrbanSemLab/2d-sem-label-potsdam.aspx)
+
+The data set contains 38 patches (all images have a dimension of 6000 x 6000 pixels), each consisting of a true orthophoto (TOP) extracted from a larger TOP mosaic. The ground sampling distance of both, the TOP and the DSM, is 5 cm. The DSM was generated via dense image matching with Trimble INPHO 5.6 software and Trimble INPHO OrthoVista was used to generate the TOP mosaic.
+
+## Model
+The model employed is UNetformer.
+ 
+![image]({{site.baseurl}}/assets/img/group_d_model.png)
+
+For further reference: [UNETFORMER Architecture](https://arxiv.org/ftp/arxiv/papers/2109/2109.08937.pdf)
 
 ## Results
-Show your results and comment them briefly.
+
+We obtained the following results:
+
+| Model    |              Description             |
+|:--------:|:--------------------------------------:|
+| ResNet18 | We trained with same backbone on GitHub |
+| Baseline | Same as GeoSeg GitHub                   |
+| ResNet50 | Using ResNet50 as backbone              |
+
+| Metric |          | Model    |          |
+|--------|----------|----------|----------|
+|        | ResNet18 | ResNet50 | Baseline |
+| F1     | 92.6     | 92.3     | 92.6     |
+| OA     | 91.4     | 90.8     | 91.2     |
+| mIoU   | 86.5     | 85.9     | 86.5     |
+
+![image]({{site.baseurl}}/assets/img/group_d_results.png)
+
+
+</details>
