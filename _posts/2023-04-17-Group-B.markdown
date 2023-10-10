@@ -25,13 +25,13 @@ tags: [Projects]
 - Jose Manuel Gutierrez Castellanos
 - Eslam Shaarawy
 
-This paper provides an overview and introduction of two main models used for object detection applications, showing outstanding results in performance and accuracy.
+This work provides an overview and introduction of two main models used for object detection applications, showing outstanding results in performance and accuracy.
 
 The **YOLOv5 & YOLOv8** models underwent a rigorous series of experiments, encompassing **architectural variations**, **augmentation levels**, and the incorporation of **negative images**. Subsequently, a concise analysis of the inferences drawn from another publicly available dataset is presented and summarized. This experimental investigation is anticipated to contribute to an enhanced comprehension of the applied model designs, offering valuable insights for researchers interested in implementing cutting-edge solutions utilizing the YOLO family models.
 
 ## Dataset
 
-The dataset used in our experiments is [NWPU VHR-10 Dataset](https://drive.google.com/drive/folders/13Vj27NP2TY2aJ5AlI4LGAnVd8ghEizrZ?usp=drive_link). The **NWPU VHR-10 dataset**, introduced by Cheng and Han in 2016, comprises **10 distinct categories** as observed in *Figure 1*, comprising airplane, baseball diamond, basketball court, bridge, harbor, ground track field, ship, storage tank, tennis court, and vehicle. and is enriched
+The dataset used in our experiments is [NWPU VHR-10 Dataset](https://drive.google.com/drive/folders/13Vj27NP2TY2aJ5AlI4LGAnVd8ghEizrZ?usp=drive_link). **NWPU VHR-10 dataset** comprises **10 distinct categories** as observed in *Figure 1*, comprising airplane, baseball diamond, basketball court, bridge, harbor, ground track field, ship, storage tank, tennis court, and vehicle. and is enriched
 with 650 meticulously annotated images.
 
 <p align="center">
@@ -42,11 +42,6 @@ with 650 meticulously annotated images.
 
 This dataset boasts a total of **715 RGB images**, sourced from Google Earth, with spatial resolutions spanning from **0.5m to 2m**. Additionally, it incorporates **85 pan-sharpened color infrared images**, characterized by a spatial resolution of 0.08m, procured from the **Vaihingen dataset (Cramer, 2010)**.
 
-Notably, the NWPU VHR-10 dataset comprises 3,896 meticulously annotated object instances, featuring horizontal bounding boxes encompassing a diverse array of objects as presented in Figure 5, including 757 airplanes, 655 storage tanks, 598 vehicles, 524 tennis courts, 390 baseball diamonds, 302 ships, 224 harbors, 163 ground track fields, 159 basketball courts and 124 bridges. 
-
-The dataset’s structure comprises three distinct folders. Firstly, the **"negative image set"** houses *150 images* that lack any instances of the specified object classes. Conversely, the **"positive image set"** encompasses *650 images*, each featuring at least one target object for detection. Finally, the **"ground truth"** folder comprises *650 individual text files*, with each file uniquely corresponding to an image contained within the "positive image set" folder. This organizational framework facilitates precise labeling and association between target objects and their respective images.
-
-As the "negative image set" exclusively comprises background images, its primary purpose is to enhance the generalization capacity of our model. This augmentation equips the model to effectively detect novel instances of objects, thus expanding its ability to discern objects in diverse contexts and scenarios.
 
 ## Model(s)
 
@@ -54,19 +49,29 @@ The models used during this research are the following:
 
 ### YOLOv5 Nano & X
 
+<details>
+  <summary >Model details</summary>
+
 <p align="center">
   <img src="{{site.baseurl}}/assets/img/yolov5arch1.jpg" alt="Image" width="800" height="800">
   <br>
   <em>Figure 2. YOLOv5 architecture (RangeKing 2023)</em>
 </p>
 
+</details>
+
 ### YOLOv8 Nano & X
+
+<details>
+  <summary >Model details</summary>
 
 <p align="center">
   <img src="{{site.baseurl}}/assets/img/yolov8arch.jpg" alt="Image" width="800" height="800">
   <br>
   <em>Figure 3. YOLOv8 architecture (RangeKing 2023)</em>
 </p>
+
+</details>
 
 ## Results
 
@@ -79,23 +84,18 @@ As evident from the metrics depicted in *Figure 5* for YOLOv8, the situation par
 As anticipated, YOLOv8, as the latest iteration within the YOLO family, demonstrates noteworthy advancements when compared to its predecessor, YOLOv5.
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/yolov5metrics.png" alt="Image" width="570" height="240">
+  <img src="{{site.baseurl}}/assets/img/yolov5metrics.png" alt="Image" width="800">
   <br>
   <em>Figure 4. YOLOv5 metrics and losses</em>
 </p>
 
 <p align="center">
-  <img src="{{site.baseurl}}/assets/img/yolov8metrics.png" alt="Image" width="570" height="240">
+  <img src="{{site.baseurl}}/assets/img/yolov8metrics.png" alt="Image" width="800">
   <br>
   <em>Figure 5. YOLOv8 metrics and losses</em>
 </p>
 
 **To facilitate a more detailed tracking of the experiments conducted in this research paper, we have made our COMET workspace publicly accessible. Researchers are encouraged to utilize this resource to gain insights from our discoveries. Kindly scan the QR code to access it or follow the respective link [YOLOv5](https://www.comet.com/e-sharaawy/yolo-v5-positive-images-experiments/view/new/panels) - [YOLOv8](https://www.comet.com/josemanuelgtz/final-experiments/view/new/panels)** 
-
-<p align="center">
-  <img src="{{site.baseurl}}/assets/img/QR.png" alt="Image" width="570" height="245">
-  <br>
-</p>
 
 
 ## Inferences
@@ -117,6 +117,8 @@ As depicted in Figure 6, the YOLOv8 model X, trained with the High augmentation 
 
 Despite YOLOv8 being trained on the relatively small and low-resolution NWPU VHR-10 dataset, as compared to the larger and higher-resolution DOTA or DIOR datasets, the model’s inferences on DOTA dataset yielded impressive results. Notably, the model exhibited exceptional confidence in detecting airplanes, as illustrated in Figure 7, where even a small airplane positioned in the upper-left corner of the image was detected with a remarkable confidence score of 0.87. It’s important to highlight that these inferences were conducted using non-standard image sizes, as we were dealing with higher-resolution images containing smaller objects compared to those used for YOLOv8 training. In Figure 7, the image size for inference was adjusted to 2632, yielding a confidence score of 0.80
 
+<!---
+
 ## Summary
 
 YOLOv5 and YOLOv8 are distinguishable by their architectural characteristics. YOLOv5 utilizes a backbone comprising **CSP Darknet53**, augmented by the **SPP Neck**, **PANet**, and three independent detection heads. In contrast, YOLOv8 introduces unique features, including the **separation of its detection heads**, the reintroduction of the **free-anchor detector**, and the incorporation of a novel loss function.
@@ -124,3 +126,5 @@ YOLOv5 and YOLOv8 are distinguishable by their architectural characteristics. YO
 While YOLOv8 demonstrated superior performance in most experiments, it is noteworthy that YOLOv5 enjoys broader recognition, particularly within the scientific community, as evidenced by its higher citation count. This divergence may be attributed to YOLOv8’s status as a *cutting-edge technology (State of the Art)* that has yet to undergo extensive validation. Nonetheless, YOLOv8 exhibits substantial potential.
 
 In our experimental endeavors, we harnessed the **NWPU VHR-10 dataset**, albeit smaller in scale compared to other datasets. However, during the inference phase, we integrated selected images from the **DOTA dataset**, yielding notably promising results. This prompts consideration of the prospect of reversing the dataset hierarchy, with the DOTA dataset assuming a central role in experimentation. Such an approach holds promise for  ignificantly enhancing inference results, given DOTA’s encompassing **variation in image resolutions, aspect ratios of both images and objects, and overall object scale**, all of which can exert a substantial influence on final outcomes.
+
+-->
