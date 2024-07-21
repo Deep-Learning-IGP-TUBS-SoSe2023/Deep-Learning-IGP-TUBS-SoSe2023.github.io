@@ -35,8 +35,8 @@ We obtained the following results:
 
 | Model    |              Description             |
 |:--------:|:--------------------------------------:|
+| Baseline | Same as [GeoSeg](https://github.com/WangLibo1995/GeoSeg) GitHub                   |
 | ResNet18 | We trained with same backbone on GitHub |
-| Baseline | Same as GeoSeg GitHub                   |
 | ResNet50 | Using ResNet50 as backbone              |
 
 <br/>
