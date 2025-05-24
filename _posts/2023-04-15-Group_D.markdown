@@ -11,7 +11,7 @@ tags: [Projects]
 
 ## Semantic segmentation in ISPRS-Potsdam dataset
 
-## Authors
+## Authors [GitHub](https://github.com/Deep-Learning-IGP-TUBS-SoSe2023/Group_D/tree/master/Final_Project)
 
 - Maritza Corona Hernandez
 - Pankaj Rajoria
